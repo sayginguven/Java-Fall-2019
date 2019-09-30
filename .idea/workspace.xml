@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
