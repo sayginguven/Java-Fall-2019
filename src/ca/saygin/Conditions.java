@@ -3,6 +3,7 @@ package ca.saygin;
 public class Conditions {
 
     static void conditions(){
+        
         int year = 2019;
         //year = year + 1;
         //pre increment
