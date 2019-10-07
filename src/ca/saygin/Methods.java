@@ -184,4 +184,77 @@ public class Methods {
 
     }
 
+    // if payment is 1 monthly
+    // if payment is 2 quarterly
+    static void feeCalculation(double fee, int payment) {
+
+
+        if (payment == 1) {
+            //calculation based on month
+            System.out.format("you need to pay %.2f %s every month \n", fee/12, "CAD");
+        }
+
+        if (payment == 2) {
+            //calculation based on quarter
+            System.out.format("you need to pay %.2f CAD every quarter\n", fee/4);
+        }
+
+    }
+
+
+    static void calculateSalary (String name, double salary, double workingHours) {
+
+        System.out.println("hello " + name);
+        System.out.format("You are making %.2f CAD/hour", salary/52/workingHours);
+
+    }
+
+    static void calculatePaintingServices () {
+        Scanner sn = new Scanner(System.in);
+        //constant
+        final double FEE = 15.0d;
+
+        //FEE = 5.0d; error
+        System.out.println("what is the length of wall");
+        double length = sn.nextDouble();
+        System.out.println("what is the width of wall");
+        double width = sn.nextDouble();
+
+        System.out.println("your total is " + length * width * FEE + " CAD" );
+        sn.close();
+    }
+
+
+    static int factorial (int number) {
+
+//        if ( number <1) {
+//            return -1;
+//        }
+
+//        if (number == 1) {
+//            return 1;
+//       }
+//
+//        return number * factorial(number-1);
+
+        //ternary operator
+        //sometimes not easy to read and undestand
+        return (number < 1) ? -1 : (number == 1) ? 1 : number *factorial(number-1);
+
+    }
+
+    static long fibonacci (int number) {
+
+        if ( number < 1 ) return -1;
+        if ( number == 1 ) return 0;
+        if ( number == 2 ) return 1;
+        return fibonacci(number-2) + fibonacci(number-1);
+
+//        return (number < 1) ? -1 : (number == 1)
+//                            ? 0 : (number == 2)
+//                            ? 1 : (fibonacci(number-2)+ fibonacci(number -1));
+    }
+
+
+
 }
