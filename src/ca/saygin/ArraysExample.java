@@ -5,7 +5,30 @@ import java.util.Arrays;
 public class ArraysExample {
 
     public static void main(String[] args) {
+        int[] primeNumbers = {2, 3, 5, 7, 11, 13, 17, 19, 23};
+        int[] reference = primeNumbers;
 
+        System.out.println("reference[2] : " + reference[2]);//5
+        reference[2] = 0;
+        System.out.println("primeNumbers[2] : " +primeNumbers[2]);//0
+
+        //int[] copy = primeNumbers.clone();
+        int[] copy = Arrays.copyOf(primeNumbers, 9);//similar to clone
+
+        System.out.println("copy[2] : " + copy[2]);
+        copy[2] = 50;
+        System.out.println("primeNumbers[2] : " + primeNumbers[2]);//0
+        System.out.println("prime numbers array");
+        printArr(primeNumbers);
+        System.out.println("reference array");
+        printArr(reference);
+        System.out.println("copy array");
+        printArr(copy);
+
+        int[] rev = reverseArr(primeNumbers);
+
+        System.out.println("reverse array array");
+        printArr(rev);
     }
 
     public static void array () {
@@ -155,4 +178,32 @@ public class ArraysExample {
             }
         }
     }
+
+    public static void printArr(int[] arr) {
+
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
+        System.out.println(" ");
+
+    }
+
+    public static int[] reverseArr(int[] arr){
+        int[] newArr = arr.clone();
+        int middle = newArr.length/2;
+        int lastIndex = newArr.length-1;
+        int temp;
+
+        for (int i = 0; i < middle ; i++) {
+
+            temp = newArr[i];
+            newArr[i] = newArr[lastIndex];
+            newArr[lastIndex] = temp;
+            lastIndex -=1;
+
+        }
+
+        return newArr;
+    }
+
 }
