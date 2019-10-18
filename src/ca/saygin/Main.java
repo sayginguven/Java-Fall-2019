@@ -1,80 +1,65 @@
 package ca.saygin;
 
 import ca.saygin.Classes.*;
-import org.w3c.dom.css.Rect;
+import ca.saygin.Classes.Box;
 
-import java.util.Scanner;
-
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Rectangle rec = new Rectangle(50d, 100d);
-        System.out.println(rec.getName());
+        List<Integer> arrayList = new ArrayList<>();// flexible size
+        List<Integer> linkedList = new LinkedList<>();// flexible size
 
-        Box aBox = new Box("metal", 9d);
-        System.out.println(aBox.area());
+        System.out.println("this is array list");
+        arrayList.add(101);
+        arrayList.add(102);
+        arrayList.add(100);
+        arrayList.add(104);
+        arrayList.add(105);
 
+        arrayList.set(2,103);
 
-        Shape[] shapeArr = new Shape[]{
-                new Circle(2.5),
-                new Rectangle(5.4,9.3),
-                new Square(4.5)
-        };
-
-
-
-
-        Scanner sn = new Scanner(System.in);
-        System.out.println("provide a index 0 1 or 2");
-        int indexNum = sn.nextInt();
-
-        if (indexNum == 0) {
-
-            System.out.println("radius?");
-            double r = sn.nextDouble();
-            ((Circle) shapeArr[indexNum]).setRadius(r);
-
-            System.out.println("raius modified to " + r);
-            System.out.println("the area of circle is");
-            System.out.println(((Circle) shapeArr[indexNum]).area());
-
-        } else if (indexNum == 1) {
-
-            System.out.println("height?");
-            double h = sn.nextDouble();
-            System.out.println("width");
-            double w = sn.nextDouble();
-            ((Rectangle) shapeArr[1]).setHeight(h);
-            ((Rectangle) shapeArr[1]).setWidth(w);
-
-            System.out.println("heigth modified to " + h);
-            System.out.println("width modified to " + w);
-            System.out.println("the area of rectangle is");
-            System.out.println(((Rectangle) shapeArr[indexNum]).area());
-
-        } else if (indexNum == 2) {
-
-            System.out.println("length?");
-            double l = sn.nextDouble();
-            ((Square) shapeArr[indexNum]).setLength(l);
-
-            System.out.println("length modified to " + l);
-            System.out.println("the area of square is");
-            System.out.println(((Square) shapeArr[indexNum]).area());
-
+        for(Integer i : arrayList) {
+            System.out.println(i);
         }
 
+        System.out.println("arrayList.get(0) : " + arrayList.get(0));
+        System.out.println(arrayList.contains(5));//false
+        System.out.println(arrayList.contains(105));//true
+
+        System.out.println("this is linked list");
+        linkedList.add(101);
+        linkedList.add(102);
+        linkedList.add(100);
+        linkedList.add(104);
+        linkedList.add(105);
+
+        linkedList.set(2,103);
+
+        for(Integer i : linkedList) {
+            System.out.println(i);
+        }
+
+        System.out.println("arrayList.get(0) : " + linkedList.get(0));
+        System.out.println(linkedList.contains(5));//false
+        System.out.println(linkedList.contains(105));//true
 
 
+        LinkedList<Shape> shapesList = new LinkedList<>();
+        shapesList.add(new Box());
+        shapesList.add(new Square());
+        shapesList.add(new Circle());
+        shapesList.add(new Rectangle());
 
-
-
-
-
-
-
+        for(Shape s : shapesList){
+            System.out.println(s.getName());
+        }
 
 
 
