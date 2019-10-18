@@ -5,7 +5,7 @@ public class Square extends Shape {
     private double length;
 
     public Square(){
-
+        super("square shape");
     }
     public Square(double length) {
         this.length = length;
