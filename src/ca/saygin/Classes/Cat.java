@@ -2,6 +2,25 @@ package ca.saygin.Classes;
 
 public class Cat implements  Animal, Pet{
 
+
+    private Toy toy;
+
+    public Cat(){
+        toy = new Toy("fish toy", "black");
+    }
+
+    public Cat(Toy toy){
+        this.toy = toy;
+    }
+
+    public Toy getToy() {
+        return toy;
+    }
+
+    public void setToy(Toy toy) {
+        this.toy = toy;
+    }
+
     @Override
     public void makeSound() {
         System.out.println("meow meow");
