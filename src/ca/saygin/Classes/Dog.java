@@ -1,6 +1,30 @@
 package ca.saygin.Classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Dog implements Animal, Pet{
+
+
+    private List<Toy> toys;
+
+    public Dog(){
+        toys = new ArrayList<>();
+        toys.add(new Toy("ball", "black"));
+    }
+
+    public Dog(List<Toy> toys) {
+        this.toys = toys;
+    }
+
+    public List<Toy> getToys() {
+        return toys;
+    }
+
+    public void setToys(List<Toy> toys) {
+        this.toys = toys;
+    }
+
 
 
     public void makeSound(){
