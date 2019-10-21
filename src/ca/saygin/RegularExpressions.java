@@ -129,11 +129,9 @@ public class RegularExpressions {
         String email = "    saygin.guven@itdcanada.ca   ";
         blue(email.trim());
 
-        
+
 
     }
-
-
 
 
     private static void red (String msg) {
