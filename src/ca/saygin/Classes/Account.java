@@ -22,10 +22,10 @@ public class Account {
         this.savingBalance = savingBalance;
     }
 
-    public double deposit(double amount, int account){
+    public double deposit(double amount, type account){
 
 
-        if(account == 1){
+        if(account == type.checking){
             if(amount < 0) {
                 System.out.println("the amount can not be negative");
                 return this.checkingBalance;
@@ -33,7 +33,7 @@ public class Account {
 
             this.checkingBalance += amount;
             return checkingBalance;
-        } else {
+        } else if (account == type.saving){
             if(amount < 0) {
                 System.out.println("the amount can not be negative");
                 return this.savingBalance;
@@ -41,6 +41,9 @@ public class Account {
 
             this.savingBalance += amount;
             return savingBalance;
+        }
+        else{
+            return -1;
         }
 
 
@@ -92,7 +95,6 @@ public class Account {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public void transferMoney(type from, type to, double amount){
 
