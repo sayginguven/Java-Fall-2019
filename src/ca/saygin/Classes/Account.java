@@ -10,7 +10,7 @@ public class Account {
 
     public enum type {checking, saving}
 
-    private static final double interestRate = 0.01;
+    public static final double interestRate = 0.01;
 
     public Account(){
         this("unknown", 0d, 0d);
@@ -51,12 +51,14 @@ public class Account {
 
     public double withdraw(double amount, type account){
 
-
-
         if(account == type.checking){
 
             if(amount < 0) {
                 System.out.println("You can not withdraw negative amount");
+                return this.checkingBalance;
+            }
+
+            if(amount > this.checkingBalance){
                 return this.checkingBalance;
             }
 
@@ -66,6 +68,10 @@ public class Account {
         } else if(account == type.saving) {
             if(amount < 0) {
                 System.out.println("You can not withdraw negative amount");
+                return this.savingBalance;
+            }
+
+            if(amount > this.savingBalance){
                 return this.savingBalance;
             }
 
@@ -97,8 +103,6 @@ public class Account {
     }
 
     public void transferMoney(type from, type to, double amount){
-
-
 
         if(from == type.checking && to ==  type.saving){
 
