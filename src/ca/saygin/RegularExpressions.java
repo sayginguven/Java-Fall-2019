@@ -134,11 +134,11 @@ public class RegularExpressions {
     }
 
 
-    private static void red (String msg) {
+    public static void red (String msg) {
         System.out.println("\u001B[31m" + msg + "\u001B[0m" );
     }
 
-    private static void blue (String msg) {
+    public static void blue (String msg) {
         System.out.println("\u001B[96m" + msg + "\u001B[0m" );
     }
 
