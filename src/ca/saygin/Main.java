@@ -37,8 +37,10 @@ public class Main {
             System.out.println(category.toString());
         }
 
-        ds.queryProductCategory();
+        ds.queryProductCategoryCurrencies();
 
+
+        ds.close();
     }
 
 }
