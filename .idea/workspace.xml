@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java-Fall-2019.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java-Fall-2019.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/business.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/META-INF/Java-Fall-2019.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/DB/Model/Datasource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/DB/Model/Datasource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Methods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Methods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Chair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Chair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Desk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Desk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Dimension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Dimension.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Floor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Projector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Projector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Roof.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Roof.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ca/saygin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+            <state relative-caret-position="67">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+            <state relative-caret-position="487">
+              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
               <folding>
                 <element signature="e#324#325#0" expanded="true" />
                 <element signature="e#349#350#0" expanded="true" />
@@ -75,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/products_categories.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
               <folding>
                 <element signature="e#394#395#0" expanded="true" />
                 <element signature="e#419#420#0" expanded="true" />
@@ -97,30 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
+            <state relative-caret-position="1320">
               <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
-              <folding>
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
-                <element signature="e#297#298#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-                <element signature="e#356#357#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#659#660#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1101#1102#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,12 +93,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="102">
+              <caret line="107" column="46" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#queryProducts#1;class#Datasource#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/ArraysExample.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -453,6 +426,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49693877" weight="0.16453674" />
       <window_info id="Structure" order="1" sideWeight="0.50306123" side_tool="true" weight="0.11341853" />
@@ -471,7 +445,7 @@
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" sideWeight="0.50159746" visible="true" weight="0.639604" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" sideWeight="0.50159746" visible="true" weight="0.41188118" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" weight="0.32960597" />
@@ -523,17 +497,6 @@
     <SUITE FILE_PATH="coverage/Java_Fall_2019$Main.ic" NAME="Main Coverage Results" MODIFIED="1570044752076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Classes/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/Classes/Dog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -824,45 +787,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Artist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Album.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="e#280#281#0" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Artist.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Album.java" />
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB.java" />
     <entry file="file://$USER_HOME$/Downloads/jdbc/src/com/timbuchalka/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-113">
@@ -930,37 +857,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Product.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
+        <state relative-caret-position="1320">
           <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/ArraysExample.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-            <element signature="e#356#357#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
+        <state relative-caret-position="487">
+          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
           <folding>
             <element signature="e#324#325#0" expanded="true" />
             <element signature="e#349#350#0" expanded="true" />
@@ -980,7 +902,7 @@
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/products_categories.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
           <folding>
             <element signature="e#394#395#0" expanded="true" />
             <element signature="e#419#420#0" expanded="true" />
@@ -998,23 +920,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="102">
+          <caret line="107" column="46" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#queryProducts#1;class#Datasource#0" />
           </folding>
         </state>
       </provider>

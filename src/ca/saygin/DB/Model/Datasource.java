@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Datasource {
     private final String DATABASE_BUSINESS = "business.db";
-    private final String CONNECTION_STRING = "jdbc:sqlite:/Users/saygin.guven/Documents/Java/Java-Fall-2019/";
+    private final String CONNECTION_STRING = "jdbc:sqlite:src/";
     private Connection conn;
     private PreparedStatement queryProductsInfo;
     private PreparedStatement queryCategoryInfo;
@@ -90,13 +90,22 @@ public class Datasource {
     public void queryProductCategory(){
 
         try {
-            queryCategoryInfo = conn.prepareStatement("SELECT p.name AS Product,  p.price AS Price, c.name AS Category FROM products p JOIN products_categories pc ON p.id = pc.products_id JOIN categories c ON c.id = pc.categories_id ORDER BY p.name");
+            StringBuilder sb = new StringBuilder();
+            sb.append("SELECT p.name AS Product,  p.price AS Price, c.name AS Category ");
+            sb.append("FROM products p ");
+            sb.append("JOIN products_categories pc ");
+            sb.append("ON p.id = pc.products_id ");
+            sb.append("JOIN categories c ");
+            sb.append("ON c.id = pc.categories_id ");
+            sb.append("ORDER BY p.name");
+            queryCategoryInfo = conn.prepareStatement(sb.toString());
+
             ResultSet rs = queryCategoryInfo.executeQuery();
             System.out.println("________________________________________");
-            System.out.format("%-15s %-6s %-6s\n", "Product","Price", "Category");
+            System.out.format("%-15s %-6s %-10s\n", "Product","Price", "Category");
             System.out.println("________________________________________");
             while(rs.next()){
-                System.out.format("%-15s %-6s %-6s\n",
+                System.out.format("%-15s %-6.2f %-10s\n",
                         rs.getString("Product"),
                         rs.getDouble("Price"),
                         rs.getString("Category")
