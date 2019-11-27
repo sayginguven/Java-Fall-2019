@@ -5,12 +5,15 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.System.currentTimeMillis;
+
 public class Datasource {
     private final String DATABASE_BUSINESS = "business.db";
     private final String CONNECTION_STRING = "jdbc:sqlite:src/";
     private Connection conn;
     private PreparedStatement queryProductsInfo;
     private PreparedStatement queryCategoryInfo;
+    private PreparedStatement queryCustomersInfo;
     private PreparedStatement queryProductCategoryCurrenciesInfo;
     private PreparedStatement queryProductCategoryInfo;
     private PreparedStatement queryProduct;
@@ -27,10 +30,10 @@ public class Datasource {
 
             queryProduct = conn.prepareStatement("SELECT * FROM products WHERE name = ?");
             queryCategory = conn.prepareStatement("SELECT * FROM categories WHERE name = ?");
-            insertIntoProducts = conn.prepareStatement("INSERT INTO products (name, description, price, currency_id) VALUES(?, ? , ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            insertIntoCatagories = conn.prepareStatement("INSERT INTO categories (name, sub_category_id) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS);
+            insertIntoProducts = conn.prepareStatement("INSERT INTO products (name, description, price, currency_id, created_at) VALUES(?, ? , ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            insertIntoCatagories = conn.prepareStatement("INSERT INTO categories (name, sub_category_id, created_at) VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             queryProductCategory = conn.prepareStatement("SELECT * FROM products_categories WHERE products_id = ? AND categories_id = ?");
-            insertIntoProductCategories = conn.prepareStatement("INSERT INTO products_categories (products_id, categories_id) VALUES (?, ?)");
+            insertIntoProductCategories = conn.prepareStatement("INSERT INTO products_categories (products_id, categories_id, created_at) VALUES (?, ?, ?)");
             return true;
         } catch (SQLException e) {
             System.out.println("Couldn't connect to database: " + e.getMessage());
@@ -121,6 +124,35 @@ public class Datasource {
                                 rs.getInt("id"),
                                 rs.getString("name"),
                                 rs.getInt("sub_category_id")
+                        )
+                );
+            }
+
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+
+        return cl;
+
+    }
+
+    public List<Customer> queryCustomers() {
+
+        List<Customer> cl = new ArrayList<>();
+
+        try {
+            queryCustomersInfo = conn.prepareStatement("SELECT * FROM customers");
+            ResultSet rs = queryCustomersInfo.executeQuery();
+
+            while (rs.next()) {
+                cl.add(new Customer(
+                                rs.getInt("id"),
+                                rs.getString("name"),
+                                rs.getString("email"),
+                                rs.getString("address"),
+                                rs.getString("phone")
                         )
                 );
             }
@@ -233,6 +265,7 @@ public class Datasource {
             insertIntoProducts.setString(2, description);
             insertIntoProducts.setDouble(3, price);
             insertIntoProducts.setInt(4, currency_id);
+            insertIntoProducts.setString(5, new Timestamp(currentTimeMillis()).toString());
 
             //this returns integer
             //execute will return boolean
@@ -264,6 +297,7 @@ public class Datasource {
 
             insertIntoCatagories.setString(1, name);
             insertIntoCatagories.setInt(2, subCategory);
+            insertIntoCatagories.setString(3, new Timestamp(currentTimeMillis()).toString());
 
             //this returns integer
             //execute will return boolean
@@ -293,6 +327,8 @@ public class Datasource {
             //Check if exist on product category already
             queryProductCategory.setInt(1, productId);
             queryProductCategory.setInt(2, categoryId);
+            //new Timestamp(currentTimeMillis())
+
             ResultSet pc = queryProductCategory.executeQuery();
             if(pc.next()){
                 throw new SQLException("This product and category already exist and linked in the database");
@@ -300,6 +336,8 @@ public class Datasource {
 
             insertIntoProductCategories.setInt(1, productId);
             insertIntoProductCategories.setInt(2, categoryId);
+            insertIntoProductCategories.setString(3, new Timestamp(currentTimeMillis()).toString());
+
 
             int affectedRows = insertIntoProductCategories.executeUpdate();
 

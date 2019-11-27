@@ -2,14 +2,19 @@ package ca.saygin;
 
 
 import ca.saygin.DB.Model.Category;
+import ca.saygin.DB.Model.Customer;
 import ca.saygin.DB.Model.Datasource;
 import ca.saygin.DB.Model.Product;
 
 import javax.naming.ldap.PagedResultsControl;
 import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import static java.lang.System.currentTimeMillis;
 
 
 public class Main {
@@ -54,6 +59,12 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        List<Customer> customerList = new ArrayList<>();
+        customerList = ds.queryCustomers();
+
+        for(Customer i : customerList){
+            System.out.println(i.toString());
+        }
 
         ds.close();
     }
