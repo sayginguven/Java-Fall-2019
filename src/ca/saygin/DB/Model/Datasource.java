@@ -1,6 +1,7 @@
 package ca.saygin.DB.Model;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +13,26 @@ public class Datasource {
     private PreparedStatement queryCategoryInfo;
     private PreparedStatement queryProductCategoryCurrenciesInfo;
     private PreparedStatement queryProductCategoryInfo;
+    private PreparedStatement queryProduct;
+    private PreparedStatement queryCategory;
+    private PreparedStatement insertIntoProducts;
+    private PreparedStatement insertIntoCatagories;
+    private PreparedStatement queryProductCategory;
+    private PreparedStatement insertIntoProductCategories;
+
 
     public boolean open() {
         try {
-            conn = DriverManager.getConnection(CONNECTION_STRING+DATABASE_BUSINESS);
+            conn = DriverManager.getConnection(CONNECTION_STRING + DATABASE_BUSINESS);
+
+            queryProduct = conn.prepareStatement("SELECT * FROM products WHERE name = ?");
+            queryCategory = conn.prepareStatement("SELECT * FROM categories WHERE name = ?");
+            insertIntoProducts = conn.prepareStatement("INSERT INTO products (name, description, price, currency_id) VALUES(?, ? , ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            insertIntoCatagories = conn.prepareStatement("INSERT INTO categories (name, sub_category_id) VALUES(?, ?)", Statement.RETURN_GENERATED_KEYS);
+            queryProductCategory = conn.prepareStatement("SELECT * FROM products_categories WHERE products_id = ? AND categories_id = ?");
+            insertIntoProductCategories = conn.prepareStatement("INSERT INTO products_categories (products_id, categories_id) VALUES (?, ?)");
             return true;
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Couldn't connect to database: " + e.getMessage());
             return false;
         }
@@ -28,40 +43,52 @@ public class Datasource {
         try {
 
 
-            if(queryProductsInfo != null){
+            if (queryProductsInfo != null) {
                 queryProductsInfo.close();
             }
 
-            if(queryCategoryInfo != null){
+            if (queryCategoryInfo != null) {
                 queryCategoryInfo.close();
             }
 
-            if(queryProductCategoryCurrenciesInfo != null){
+            if (queryProductCategoryCurrenciesInfo != null) {
                 queryProductCategoryCurrenciesInfo.close();
             }
 
-
-            if(queryProductCategoryInfo != null){
+            if (queryProductCategoryInfo != null) {
                 queryProductCategoryInfo.close();
             }
 
-            if(conn != null) {
+            if (queryCategory != null) {
+                queryCategory.close();
+            }
+            if (queryProduct != null) {
+                queryProduct.close();
+            }
+            if (insertIntoCatagories != null) {
+                insertIntoCatagories.close();
+            }
+            if (insertIntoProducts != null) {
+                insertIntoProducts.close();
+            }
+
+            if (conn != null) {
                 conn.close();
             }
 
-        } catch(SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Couldn't close connection: " + e.getMessage());
         }
     }
 
-    public List<Product> queryProducts(){
+    public List<Product> queryProducts() {
 
         List<Product> pl = new ArrayList<>();
         try {
             queryProductsInfo = conn.prepareStatement("SELECT * FROM products");
             ResultSet rs = queryProductsInfo.executeQuery();
 
-            while(rs.next()){
+            while (rs.next()) {
                 pl.add(new Product(
                         rs.getInt("id"),
                         rs.getString("name"),
@@ -73,7 +100,7 @@ public class Datasource {
             }
 
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
         }
@@ -82,14 +109,14 @@ public class Datasource {
 
     }
 
-    public List<Category> queryCategory(){
+    public List<Category> queryCategory() {
 
         List<Category> cl = new ArrayList<>();
         try {
             queryCategoryInfo = conn.prepareStatement("SELECT * FROM categories");
             ResultSet rs = queryCategoryInfo.executeQuery();
 
-            while(rs.next()){
+            while (rs.next()) {
                 cl.add(new Category(
                                 rs.getInt("id"),
                                 rs.getString("name"),
@@ -99,7 +126,7 @@ public class Datasource {
             }
 
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
         }
@@ -108,7 +135,7 @@ public class Datasource {
 
     }
 
-    public void queryProductCategory(){
+    public void queryProductCategory() {
 
         try {
             StringBuilder sb = new StringBuilder();
@@ -126,11 +153,11 @@ public class Datasource {
 
             ResultSet rs = queryProductCategoryInfo.executeQuery();
             System.out.println("________________________________________");
-            System.out.format("%-15s %-6s %-10s\n", "Product","Price", "Category");
-            System.out.format("%-15s %-6s %-10s\n", "","CAD", "");
+            System.out.format("%-15s %-6s %-10s\n", "Product", "Price", "Category");
+            System.out.format("%-15s %-6s %-10s\n", "", "CAD", "");
 
             System.out.println("________________________________________");
-            while(rs.next()){
+            while (rs.next()) {
                 System.out.format("%-15s %-6.2f %-10s\n",
                         rs.getString("Product"),
                         rs.getDouble("Price"),
@@ -140,13 +167,13 @@ public class Datasource {
             System.out.println("________________________________________");
 
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
     }
 
-    public void queryProductCategoryCurrencies(){
+    public void queryProductCategoryCurrencies() {
 
         try {
             StringBuilder sb = new StringBuilder();
@@ -168,10 +195,10 @@ public class Datasource {
 
             ResultSet rs = queryProductCategoryCurrenciesInfo.executeQuery();
             System.out.println("_____________________________________________________");
-            System.out.format("%-15s %-8s %-8s %-8s %-10s\n", "Product","Price", "Price","Price","Category");
-            System.out.format("%-15s %-8s %-8s %-8s %-10s\n", "","CAD","USD","JPY", "");
+            System.out.format("%-15s %-8s %-8s %-8s %-10s\n", "Product", "Price", "Price", "Price", "Category");
+            System.out.format("%-15s %-8s %-8s %-8s %-10s\n", "", "CAD", "USD", "JPY", "");
             System.out.println("_____________________________________________________");
-            while(rs.next()){
+            while (rs.next()) {
                 System.out.format("%-15s %-8.2f %-8.2f %-8.2f %-10s\n",
                         rs.getString("Product"),
                         rs.getDouble("Price"),
@@ -183,7 +210,7 @@ public class Datasource {
             System.out.println("_____________________________________________________");
 
 
-        } catch(SQLException e){
+        } catch (SQLException e) {
 
             System.out.println(e.getMessage());
 
@@ -191,4 +218,115 @@ public class Datasource {
 
     }
 
+    private int insertProduct(String name, String description, double price, int currency_id) throws SQLException {
+
+        queryProduct.setString(1, name);
+        ResultSet results = queryProduct.executeQuery();
+
+        if (results.next()) {
+
+            return results.getInt("id");
+
+        } else {
+
+            insertIntoProducts.setString(1, name);
+            insertIntoProducts.setString(2, description);
+            insertIntoProducts.setDouble(3, price);
+            insertIntoProducts.setInt(4, currency_id);
+
+            //this returns integer
+            //execute will return boolean
+            int affectedRows = insertIntoProducts.executeUpdate();
+
+            if (affectedRows != 1) {
+                throw new SQLException("Couldn't insert product!");
+            }
+
+            ResultSet generatedKeys = insertIntoProducts.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            } else {
+                throw new SQLException("Couldn't get id for product");
+            }
+        }
+    }
+
+    private int insertCategory(String name, int subCategory) throws SQLException {
+
+        queryCategory.setString(1, name);
+        ResultSet results = queryCategory.executeQuery();
+
+        if (results.next()) {
+
+            return results.getInt("id");
+
+        } else {
+
+            insertIntoCatagories.setString(1, name);
+            insertIntoCatagories.setInt(2, subCategory);
+
+            //this returns integer
+            //execute will return boolean
+            int affectedRows = insertIntoCatagories.executeUpdate();
+
+            if (affectedRows != 1) {
+                throw new SQLException("Couldn't insert category!");
+            }
+
+            ResultSet generatedKeys = insertIntoCatagories.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            } else {
+                throw new SQLException("Couldn't get id for category");
+            }
+        }
+    }
+
+    public void insertProductCategory(String productName, String productDescription, double productPrice, int currency_id, String categoryName, int subCategory) throws SQLException {
+
+        try {
+            conn.setAutoCommit(false);
+
+            int productId = insertProduct(productName, productDescription, productPrice, currency_id);
+            int categoryId = insertCategory(categoryName, subCategory);
+
+            //Check if exist on product category already
+            queryProductCategory.setInt(1, productId);
+            queryProductCategory.setInt(2, categoryId);
+            ResultSet pc = queryProductCategory.executeQuery();
+            if(pc.next()){
+                throw new SQLException("This product and category already exist and linked in the database");
+            }
+
+            insertIntoProductCategories.setInt(1, productId);
+            insertIntoProductCategories.setInt(2, categoryId);
+
+            int affectedRows = insertIntoProductCategories.executeUpdate();
+
+            if (affectedRows == 1) {
+                System.out.println("Commitment completed successfully");
+                conn.commit();
+            } else {
+                throw new SQLException("The product category insert failed");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Insert product category exception: " + e.getMessage());
+            try {
+                System.out.println("Performing rollback");
+                conn.rollback();
+            } catch (SQLException e2) {
+                System.out.println("rollback failed " + e2.getMessage());
+            }
+        } finally {
+            try {
+                System.out.println("Resetting default commit behavior");
+                conn.setAutoCommit(true);
+            } catch (SQLException e) {
+                System.out.println("Couldn't reset auto-commit! " + e.getMessage());
+            }
+
+        }
+
+    }
 }

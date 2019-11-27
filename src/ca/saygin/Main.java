@@ -5,6 +5,8 @@ import ca.saygin.DB.Model.Category;
 import ca.saygin.DB.Model.Datasource;
 import ca.saygin.DB.Model.Product;
 
+import javax.naming.ldap.PagedResultsControl;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -38,6 +40,19 @@ public class Main {
         }
 
         ds.queryProductCategoryCurrencies();
+
+        try {
+
+            ds.insertProductCategory("Cookie",
+                    "cooked with chocolate and mapple srup",
+                    2.25,
+                    1,
+                    "Snack",
+                    5);
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
 
 
         ds.close();
