@@ -1,26 +1,14 @@
 package ca.saygin;
 
+import ca.saygin.DB.Model.*;
 
-import ca.saygin.DB.Model.Category;
-import ca.saygin.DB.Model.Customer;
-import ca.saygin.DB.Model.Datasource;
-import ca.saygin.DB.Model.Product;
-
-import javax.naming.ldap.PagedResultsControl;
 import java.sql.*;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
-import static java.lang.System.currentTimeMillis;
-
 
 public class Main {
 
     public static void main(String[] args) {
-
 
         Datasource ds = new Datasource();
 
@@ -46,6 +34,8 @@ public class Main {
 
         ds.queryProductCategoryCurrencies();
 
+        ds.queryProductCategory();
+
         try {
 
             ds.insertProductCategory("Cookie",
@@ -59,7 +49,21 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        List<Customer> customerList = new ArrayList<>();
+        try {
+
+            ds.insertProductCategory("Bread",
+                    "fresh baked bread",
+                    1.55,
+                    1,
+                    "Food",
+                    5);
+
+        } catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+
+
+        List<Customer> customerList;
         customerList = ds.queryCustomers();
 
         for(Customer i : customerList){

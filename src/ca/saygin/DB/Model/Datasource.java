@@ -1,5 +1,6 @@
 package ca.saygin.DB.Model;
 
+import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -18,8 +19,11 @@ public class Datasource {
     private PreparedStatement queryProductCategoryInfo;
     private PreparedStatement queryProduct;
     private PreparedStatement queryCategory;
+    private PreparedStatement queryCustomer;
+    private PreparedStatement queryCard;
     private PreparedStatement insertIntoProducts;
     private PreparedStatement insertIntoCatagories;
+    private PreparedStatement insertIntoCustomers;
     private PreparedStatement queryProductCategory;
     private PreparedStatement insertIntoProductCategories;
 
@@ -28,19 +32,58 @@ public class Datasource {
         try {
             conn = DriverManager.getConnection(CONNECTION_STRING + DATABASE_BUSINESS);
 
+
+
+            StringBuilder productcategoryquery = new StringBuilder();
+            productcategoryquery.append("SELECT p.name AS Product,  p.price AS Price, c.name AS Category ");
+            productcategoryquery.append("FROM products p ");
+            productcategoryquery.append("JOIN products_categories pc ");
+            productcategoryquery.append("ON p.id = pc.products_id ");
+            productcategoryquery.append("JOIN categories c ");
+            productcategoryquery.append("ON c.id = pc.categories_id ");
+            productcategoryquery.append("JOIN currencies cur ");
+            productcategoryquery.append("ON p.currency_id = cur.id ");
+            productcategoryquery.append("where p.active = 1 ");
+            productcategoryquery.append("ORDER BY p.name");
+            queryProductCategoryInfo = conn.prepareStatement(productcategoryquery.toString());
+
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("SELECT p.name AS Product,  p.price AS Price, c.name AS Category, ");
+            sb.append("(SELECT curp.value FROM currencies_price curp WHERE id = 2) * p.price AS PriceUSD, ");
+            sb.append("(SELECT curp.value FROM currencies_price curp WHERE id = 4) * p.price AS PriceJPY ");
+            sb.append("FROM products p ");
+            sb.append("JOIN products_categories pc ");
+            sb.append("ON p.id = pc.products_id ");
+            sb.append("JOIN categories c ");
+            sb.append("ON c.id = pc.categories_id ");
+            sb.append("JOIN currencies cur ");
+            sb.append("ON p.currency_id = cur.id ");
+            sb.append("JOIN currencies_price curp ");
+            sb.append("ON curp.currency_id  = cur.id ");
+            sb.append("where p.active = 1 ");
+            sb.append("ORDER BY p.name");
+            queryProductCategoryCurrenciesInfo = conn.prepareStatement(sb.toString());
+
             queryProduct = conn.prepareStatement("SELECT * FROM products WHERE name = ?");
+            queryProductsInfo = conn.prepareStatement("SELECT * FROM products");
+            queryCard = conn.prepareStatement("SELECT * FROM cards");
             queryCategory = conn.prepareStatement("SELECT * FROM categories WHERE name = ?");
+            queryCategoryInfo = conn.prepareStatement("SELECT * FROM categories");
+            queryCustomersInfo = conn.prepareStatement("SELECT * FROM customers");
             insertIntoProducts = conn.prepareStatement("INSERT INTO products (name, description, price, currency_id, created_at) VALUES(?, ? , ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             insertIntoCatagories = conn.prepareStatement("INSERT INTO categories (name, sub_category_id, created_at) VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             queryProductCategory = conn.prepareStatement("SELECT * FROM products_categories WHERE products_id = ? AND categories_id = ?");
+            queryCustomer = conn.prepareStatement("SELECT * FROM customers WHERE email = ?", Statement.RETURN_GENERATED_KEYS);
+            queryCard = conn.prepareStatement("SELECT * FROM cards");
             insertIntoProductCategories = conn.prepareStatement("INSERT INTO products_categories (products_id, categories_id, created_at) VALUES (?, ?, ?)");
+            insertIntoCustomers = conn.prepareStatement("INSERT INTO customers (name, email, address, phone, created_at) VALUES (? , ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             return true;
         } catch (SQLException e) {
             System.out.println("Couldn't connect to database: " + e.getMessage());
             return false;
         }
     }
-
 
     public void close() {
         try {
@@ -53,6 +96,7 @@ public class Datasource {
             if (queryCategoryInfo != null) {
                 queryCategoryInfo.close();
             }
+
 
             if (queryProductCategoryCurrenciesInfo != null) {
                 queryProductCategoryCurrenciesInfo.close();
@@ -68,6 +112,11 @@ public class Datasource {
             if (queryProduct != null) {
                 queryProduct.close();
             }
+
+            if(queryCard != null){
+                queryCard.close();
+            }
+
             if (insertIntoCatagories != null) {
                 insertIntoCatagories.close();
             }
@@ -88,7 +137,7 @@ public class Datasource {
 
         List<Product> pl = new ArrayList<>();
         try {
-            queryProductsInfo = conn.prepareStatement("SELECT * FROM products");
+
             ResultSet rs = queryProductsInfo.executeQuery();
 
             while (rs.next()) {
@@ -116,7 +165,6 @@ public class Datasource {
 
         List<Category> cl = new ArrayList<>();
         try {
-            queryCategoryInfo = conn.prepareStatement("SELECT * FROM categories");
             ResultSet rs = queryCategoryInfo.executeQuery();
 
             while (rs.next()) {
@@ -143,7 +191,6 @@ public class Datasource {
         List<Customer> cl = new ArrayList<>();
 
         try {
-            queryCustomersInfo = conn.prepareStatement("SELECT * FROM customers");
             ResultSet rs = queryCustomersInfo.executeQuery();
 
             while (rs.next()) {
@@ -170,18 +217,6 @@ public class Datasource {
     public void queryProductCategory() {
 
         try {
-            StringBuilder sb = new StringBuilder();
-            sb.append("SELECT p.name AS Product,  p.price AS Price, c.name AS Category ");
-            sb.append("FROM products p ");
-            sb.append("JOIN products_categories pc ");
-            sb.append("ON p.id = pc.products_id ");
-            sb.append("JOIN categories c ");
-            sb.append("ON c.id = pc.categories_id ");
-            sb.append("JOIN currencies cur ");
-            sb.append("ON p.currency_id = cur.id ");
-            sb.append("where p.active = 1 ");
-            sb.append("ORDER BY p.name");
-            queryProductCategoryInfo = conn.prepareStatement(sb.toString());
 
             ResultSet rs = queryProductCategoryInfo.executeQuery();
             System.out.println("________________________________________");
@@ -208,22 +243,7 @@ public class Datasource {
     public void queryProductCategoryCurrencies() {
 
         try {
-            StringBuilder sb = new StringBuilder();
-            sb.append("SELECT p.name AS Product,  p.price AS Price, c.name AS Category, ");
-            sb.append("(SELECT curp.value FROM currencies_price curp WHERE id = 2) * p.price AS PriceUSD, ");
-            sb.append("(SELECT curp.value FROM currencies_price curp WHERE id = 4) * p.price AS PriceJPY ");
-            sb.append("FROM products p ");
-            sb.append("JOIN products_categories pc ");
-            sb.append("ON p.id = pc.products_id ");
-            sb.append("JOIN categories c ");
-            sb.append("ON c.id = pc.categories_id ");
-            sb.append("JOIN currencies cur ");
-            sb.append("ON p.currency_id = cur.id ");
-            sb.append("JOIN currencies_price curp ");
-            sb.append("ON curp.currency_id  = cur.id ");
-            sb.append("where p.active = 1 ");
-            sb.append("ORDER BY p.name");
-            queryProductCategoryCurrenciesInfo = conn.prepareStatement(sb.toString());
+
 
             ResultSet rs = queryProductCategoryCurrenciesInfo.executeQuery();
             System.out.println("_____________________________________________________");
@@ -367,4 +387,43 @@ public class Datasource {
         }
 
     }
+
+    //inserting customer should insert card automaticaly
+
+    //change this method to a transaction
+    public int insertCustomer(String name, String email, String address, String phone ) throws SQLException{
+
+        queryCustomer.setString(1, email);
+        ResultSet results = queryCustomer.executeQuery();
+
+        if (results.next()) {
+
+            return results.getInt("id");
+
+        } else {
+
+            insertIntoCustomers.setString(1, name);
+            insertIntoCustomers.setString(2, email);
+            insertIntoCustomers.setString(3, address);
+            insertIntoCustomers.setString(4, new Timestamp(currentTimeMillis()).toString());
+
+            //this returns integer
+            //execute will return boolean
+            int affectedRows = insertIntoCustomers.executeUpdate();
+
+            if (affectedRows != 1) {
+                throw new SQLException("Couldn't insert customer!");
+            }
+
+            ResultSet generatedKeys = insertIntoCustomers.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            } else {
+                throw new SQLException("Couldn't get id for customer");
+            }
+        }
+
+    }
+
+
 }
