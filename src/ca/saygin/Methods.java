@@ -168,7 +168,7 @@ public class Methods {
 
     }
 
-
+    //checks if the passing argument is prime
     static boolean isPrime (int number) {
 
         if (number < 2) return false;
@@ -224,7 +224,6 @@ public class Methods {
         sn.close();
     }
 
-
     static int factorial (int number) {
 
 //        if ( number <1) {
@@ -254,7 +253,6 @@ public class Methods {
 //                            ? 0 : (number == 2)
 //                            ? 1 : (fibonacci(number-2)+ fibonacci(number -1));
     }
-
 
 
 }

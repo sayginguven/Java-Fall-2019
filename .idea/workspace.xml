@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Methods.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,16 +137,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-3556">
               <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#4519#4520#0" expanded="true" />
                 <element signature="e#4588#4589#0" expanded="true" />
                 <element signature="e#4632#4633#0" expanded="true" />
                 <element signature="e#4701#4702#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/saygin/Methods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="644">
+              <caret line="256" selection-start-line="256" selection-end-line="256" />
+              <folding>
+                <element signature="method#main#0;class#Methods#0" />
+                <element signature="method#menu#0;class#Methods#0" />
+                <element signature="method#getInputFromUser#0;class#Methods#0" />
+                <element signature="method#projectEulerQuestion1#0;class#Methods#0" />
+                <element signature="method#numbers1To100#0;class#Methods#0" />
+                <element signature="method#multiply#0;class#Methods#0" />
+                <element signature="method#isPrime#0;class#Methods#0" />
+                <element signature="method#feeCalculation#0;class#Methods#0" />
+                <element signature="method#calculateSalary#0;class#Methods#0" />
+                <element signature="method#calculatePaintingServices#0;class#Methods#0" />
+                <element signature="method#factorial#0;class#Methods#0" />
+                <element signature="method#fibonacci#0;class#Methods#0" />
               </folding>
             </state>
           </provider>
@@ -185,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ca/saygin/Methods.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/test.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/ArraysExample.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Car.java" />
@@ -236,6 +257,7 @@
         <option value="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Variables.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java" />
+        <option value="$PROJECT_DIR$/src/ca/saygin/Methods.java" />
       </list>
     </option>
   </component>
@@ -477,10 +499,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="907" y="23" width="1653" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49693877" visible="true" weight="0.16932908" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49693877" weight="0.19739293" />
       <window_info id="Structure" order="1" sideWeight="0.50306123" side_tool="true" weight="0.11341853" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -699,20 +721,6 @@
           <folding>
             <element signature="e#1660#1661#0" expanded="true" />
             <element signature="e#1690#1691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Methods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="205" lean-forward="true" selection-start-line="205" selection-end-line="205" />
-          <folding>
-            <element signature="method#menu#0;class#Methods#0" />
-            <element signature="method#getInputFromUser#0;class#Methods#0" />
-            <element signature="method#projectEulerQuestion1#0;class#Methods#0" />
-            <element signature="method#numbers1To100#0;class#Methods#0" />
-            <element signature="method#isPrime#0;class#Methods#0" />
           </folding>
         </state>
       </provider>
@@ -977,13 +985,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="-3556">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#4519#4520#0" expanded="true" />
             <element signature="e#4588#4589#0" expanded="true" />
             <element signature="e#4632#4633#0" expanded="true" />
             <element signature="e#4701#4702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Methods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="256" selection-start-line="256" selection-end-line="256" />
+          <folding>
+            <element signature="method#main#0;class#Methods#0" />
+            <element signature="method#menu#0;class#Methods#0" />
+            <element signature="method#getInputFromUser#0;class#Methods#0" />
+            <element signature="method#projectEulerQuestion1#0;class#Methods#0" />
+            <element signature="method#numbers1To100#0;class#Methods#0" />
+            <element signature="method#multiply#0;class#Methods#0" />
+            <element signature="method#isPrime#0;class#Methods#0" />
+            <element signature="method#feeCalculation#0;class#Methods#0" />
+            <element signature="method#calculateSalary#0;class#Methods#0" />
+            <element signature="method#calculatePaintingServices#0;class#Methods#0" />
+            <element signature="method#factorial#0;class#Methods#0" />
+            <element signature="method#fibonacci#0;class#Methods#0" />
           </folding>
         </state>
       </provider>
