@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Loop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Loop.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,33 +21,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
+            <state relative-caret-position="1157">
               <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#databaseTest#0;class#Main#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Category.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/saygin/Loop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="120">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
               <folding>
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#441#442#0" expanded="true" />
-                <element signature="e#468#469#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#579#580#0" expanded="true" />
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
+                <element signature="method#loop#0;class#Loop#0" />
               </folding>
             </state>
           </provider>
@@ -152,17 +142,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/Methods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="256" selection-start-line="256" selection-end-line="256" />
+            <state relative-caret-position="629">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
               <folding>
                 <element signature="method#main#0;class#Methods#0" />
                 <element signature="method#menu#0;class#Methods#0" />
                 <element signature="method#getInputFromUser#0;class#Methods#0" />
                 <element signature="method#projectEulerQuestion1#0;class#Methods#0" />
-                <element signature="method#numbers1To100#0;class#Methods#0" />
                 <element signature="method#multiply#0;class#Methods#0" />
                 <element signature="method#isPrime#0;class#Methods#0" />
                 <element signature="method#feeCalculation#0;class#Methods#0" />
@@ -229,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Door.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/ClassRoom.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/MyDimension.java" />
-        <option value="$PROJECT_DIR$/src/ca/saygin/Loop.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Wall.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Window.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Classroom/Room.java" />
@@ -258,6 +246,7 @@
         <option value="$PROJECT_DIR$/src/ca/saygin/Variables.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Methods.java" />
+        <option value="$PROJECT_DIR$/src/ca/saygin/Loop.java" />
       </list>
     </option>
   </component>
@@ -267,11 +256,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="907" />
-    <option name="y" value="23" />
-    <option name="width" value="1653" />
-    <option name="height" value="977" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectId" id="1RZ9Om2pZ5JvME8vYEqD6iLoYFT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -499,10 +486,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="907" y="23" width="1653" height="977" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49693877" weight="0.19739293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49693877" visible="true" weight="0.16932908" />
       <window_info id="Structure" order="1" sideWeight="0.50306123" side_tool="true" weight="0.11341853" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -571,13 +558,6 @@
     <SUITE FILE_PATH="coverage/Java_Fall_2019$Main.ic" NAME="Main Coverage Results" MODIFIED="1570044752076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Loop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2460">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/Classes/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -871,16 +851,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Card.java" />
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -998,14 +968,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/Methods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="256" selection-start-line="256" selection-end-line="256" />
+        <state relative-caret-position="629">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
           <folding>
             <element signature="method#main#0;class#Methods#0" />
             <element signature="method#menu#0;class#Methods#0" />
             <element signature="method#getInputFromUser#0;class#Methods#0" />
             <element signature="method#projectEulerQuestion1#0;class#Methods#0" />
-            <element signature="method#numbers1To100#0;class#Methods#0" />
             <element signature="method#multiply#0;class#Methods#0" />
             <element signature="method#isPrime#0;class#Methods#0" />
             <element signature="method#feeCalculation#0;class#Methods#0" />
@@ -1013,6 +982,27 @@
             <element signature="method#calculatePaintingServices#0;class#Methods#0" />
             <element signature="method#factorial#0;class#Methods#0" />
             <element signature="method#fibonacci#0;class#Methods#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1157">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#databaseTest#0;class#Main#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Loop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="method#loop#0;class#Loop#0" />
           </folding>
         </state>
       </provider>
