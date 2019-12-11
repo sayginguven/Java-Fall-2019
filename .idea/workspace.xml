@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/business.db" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/business.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/DB/Model/Datasource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/DB/Model/Datasource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java-Fall-2019/ca/saygin/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/business.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Variables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Variables.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="559">
@@ -111,6 +105,30 @@
                 <element signature="method#insertCard#0;class#Datasource#0" />
                 <element signature="method#insertCustomer#0;class#Datasource#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ca/saygin/ArraysExample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding>
+                <element signature="method#twoDArray#0;class#ArraysExample#0" />
+                <element signature="method#threearray#0;class#ArraysExample#0" />
+                <element signature="method#printArr#0;class#ArraysExample#0" />
+                <element signature="method#reverseArr#0;class#ArraysExample#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/saygin/Variables.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="693">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -162,7 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ca/saygin/Conditions.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Methods.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/test.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/ArraysExample.java" />
@@ -213,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/ca/saygin/DB/Model/Customer.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Main.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/DB/Model/Datasource.java" />
+        <option value="$PROJECT_DIR$/src/ca/saygin/Variables.java" />
       </list>
     </option>
   </component>
@@ -240,6 +258,24 @@
             <path>
               <item name="Java-Fall-2019" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java-Fall-2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Fall-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Fall-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Fall-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Fall-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="saygin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java-Fall-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java-Fall-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="saygin" type="462c0819:PsiDirectoryNode" />
+              <item name="Classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java-Fall-2019" type="b2602c69:ProjectViewProjectNode" />
@@ -294,7 +330,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Variables">
     <configuration name="ExceptionHandlingAndValidation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ca.saygin.Classes.ExceptionHandlingAndValidation" />
       <module name="Java-Fall-2019" />
@@ -314,6 +350,19 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Variables" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.saygin.Variables" />
+      <module name="Java-Fall-2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.saygin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -365,29 +414,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.setBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java-Fall-2019" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ca.saygin.Classes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ca.saygin.Classes" />
-      <option name="MAIN_CLASS_NAME" value="ca.saygin.Classes.AccountTest" />
-      <option name="METHOD_NAME" value="setBalance" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Variables" />
         <item itemvalue="Application.ExceptionHandlingAndValidation" />
         <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.deposit" />
         <item itemvalue="JUnit.AccountTest.depositAndWithrawl" />
-        <item itemvalue="JUnit.AccountTest.setBalance" />
       </list>
     </recent_temporary>
   </component>
@@ -509,30 +542,6 @@
     <SUITE FILE_PATH="coverage/Java_Fall_2019$Main.ic" NAME="Main Coverage Results" MODIFIED="1570044752076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Classes/Circle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#134#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/ArraysExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="94" column="44" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
-          <folding>
-            <element signature="method#twoDArray#0;class#ArraysExample#0" />
-            <element signature="method#threearray#0;class#ArraysExample#0" />
-            <element signature="method#printArr#0;class#ArraysExample#0" />
-            <element signature="method#reverseArr#0;class#ArraysExample#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ca/saygin/Loop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2460">
@@ -945,6 +954,26 @@
             <element signature="method#insertCard#0;class#Datasource#0" />
             <element signature="method#insertCustomer#0;class#Datasource#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/ArraysExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding>
+            <element signature="method#twoDArray#0;class#ArraysExample#0" />
+            <element signature="method#threearray#0;class#ArraysExample#0" />
+            <element signature="method#printArr#0;class#ArraysExample#0" />
+            <element signature="method#reverseArr#0;class#ArraysExample#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>

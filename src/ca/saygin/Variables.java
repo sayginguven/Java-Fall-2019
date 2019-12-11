@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 class Variables {
 
-    // global static variables are automaticly initialized with value
+    // global static variables are automatically initialized with value
     // 0 or false
     static int intVal;
     static boolean isSleeping;
@@ -83,11 +83,12 @@ class Variables {
         System.out.println("the initial1 value is " + initial1);
         System.out.println("the initial2 value is " + initial2);
 
-        String name = "I love icecream";
+        String name = "I love ice cream";
         System.out.print(name + "\n");
     }
 
     public static void main(String[] args) {
+        variables();
     }
 
 }
