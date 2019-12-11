@@ -1,8 +1,6 @@
 package ca.saygin.DB.Model;
 
-import javax.swing.plaf.nimbus.State;
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +25,6 @@ public class Datasource {
     private PreparedStatement insertIntoCards;
     private PreparedStatement queryProductCategory;
     private PreparedStatement insertIntoProductCategories;
-
 
     public boolean open() {
         try {

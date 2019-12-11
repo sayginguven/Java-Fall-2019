@@ -12,7 +12,6 @@ public class Category {
         this.sub_category_id = sub_category_id;
     }
 
-
     public int getId() {
         return id;
     }

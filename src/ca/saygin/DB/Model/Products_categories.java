@@ -1,14 +1,12 @@
 package ca.saygin.DB.Model;
 
-import ca.saygin.Classes.Classroom.Projector;
-
-public class products_categories {
+public class Products_categories {
 
     private int id;
     private int product_id;
     private int category_id;
 
-    public products_categories(int id, int product_id, int category_id) {
+    public Products_categories(int id, int product_id, int category_id) {
         this.id = id;
         this.product_id = product_id;
         this.category_id = category_id;

@@ -66,4 +66,5 @@ public class Product {
                 ", currency_id=" + currency_id +
                 '}';
     }
+
 }
