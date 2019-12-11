@@ -18,7 +18,6 @@ public class ExceptionHandlingAndValidation {
             System.out.println("________________");
         }
 
-
         try {
             String name = null;
             System.out.println(name.length());

@@ -10,6 +10,7 @@ public class Toy {
         color = "white";
     }
 
+
     public Toy(String name, String color) {
         this.name = name;
         this.color = color;

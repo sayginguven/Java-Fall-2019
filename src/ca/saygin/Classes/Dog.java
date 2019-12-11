@@ -26,7 +26,6 @@ public class Dog implements Animal, Pet{
     }
 
 
-
     public void makeSound(){
         System.out.println("woof woof");
     }

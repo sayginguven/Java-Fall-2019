@@ -16,6 +16,7 @@ public class Square extends Shape {
         this.length = length;
     }
 
+
     @Override
     public double area() {
         return length*length;

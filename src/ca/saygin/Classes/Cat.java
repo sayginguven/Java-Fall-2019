@@ -50,4 +50,5 @@ public class Cat implements  Animal, Pet{
     public void cuddle() {
         System.out.println("do some mrrrrrr sound");
     }
+
 }

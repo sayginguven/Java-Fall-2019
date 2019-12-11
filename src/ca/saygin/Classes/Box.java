@@ -26,4 +26,5 @@ public class Box extends Square {
         return super.area()*6;
     }
 
+
 }
