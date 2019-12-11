@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46567b0b-4214-4dfd-ab62-2cf2eafd5f99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Loop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Loop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ca/saygin/Conditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ca/saygin/Conditions.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ca/saygin/Loop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -43,24 +43,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ca/saygin/DB/Model/products_categories.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ca/saygin/Conditions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="210">
+              <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
               <folding>
-                <element signature="e#394#395#0" expanded="true" />
-                <element signature="e#419#420#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#514#515#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#709#710#0" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#806#807#0" expanded="true" />
+                <element signature="method#conditions#0;class#Conditions#0" />
+                <element signature="e#4926#4927#0" expanded="true" />
+                <element signature="e#4954#4955#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ca/saygin/test.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/ArraysExample.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Car.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Classes/Car.java" />
@@ -247,6 +237,7 @@
         <option value="$PROJECT_DIR$/src/ca/saygin/RegularExpressions.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Methods.java" />
         <option value="$PROJECT_DIR$/src/ca/saygin/Loop.java" />
+        <option value="$PROJECT_DIR$/src/ca/saygin/Conditions.java" />
       </list>
     </option>
   </component>
@@ -256,9 +247,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="600" />
+    <option name="y" value="23" />
+    <option name="width" value="1960" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectId" id="1RZ9Om2pZ5JvME8vYEqD6iLoYFT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -346,7 +339,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Variables">
+  <component name="RunManager" selected="Application.Conditions">
+    <configuration name="Conditions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ca.saygin.Conditions" />
+      <module name="Java-Fall-2019" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.saygin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExceptionHandlingAndValidation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ca.saygin.Classes.ExceptionHandlingAndValidation" />
       <module name="Java-Fall-2019" />
@@ -414,29 +420,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.depositAndWithrawl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Java-Fall-2019" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ca.saygin.Classes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ca.saygin.Classes" />
-      <option name="MAIN_CLASS_NAME" value="ca.saygin.Classes.AccountTest" />
-      <option name="METHOD_NAME" value="depositAndWithrawl" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Conditions" />
         <item itemvalue="Application.Variables" />
         <item itemvalue="Application.ExceptionHandlingAndValidation" />
         <item itemvalue="JUnit.AccountTest" />
         <item itemvalue="JUnit.AccountTest.deposit" />
-        <item itemvalue="JUnit.AccountTest.depositAndWithrawl" />
       </list>
     </recent_temporary>
   </component>
@@ -486,10 +476,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="907" y="23" width="1653" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49693877" visible="true" weight="0.16932908" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49693877" visible="true" weight="0.07883302" />
       <window_info id="Structure" order="1" sideWeight="0.50306123" side_tool="true" weight="0.11341853" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -829,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Conditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/jdbc/datasource/src/com/timbuchalka/model/Datasource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="890">
@@ -1003,6 +986,18 @@
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding>
             <element signature="method#loop#0;class#Loop#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/saygin/Conditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="method#conditions#0;class#Conditions#0" />
+            <element signature="e#4926#4927#0" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
           </folding>
         </state>
       </provider>
