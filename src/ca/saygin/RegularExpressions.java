@@ -1,7 +1,5 @@
 package ca.saygin;
 
-import java.util.Scanner;
-
 public class RegularExpressions {
 
     public static void main(String[] args) {
@@ -128,8 +126,6 @@ public class RegularExpressions {
         //trim the end and the begining of string
         String email = "    saygin.guven@itdcanada.ca   ";
         blue(email.trim());
-
-
 
     }
 
