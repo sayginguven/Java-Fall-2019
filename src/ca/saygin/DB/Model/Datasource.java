@@ -24,6 +24,7 @@ public class Datasource {
     private PreparedStatement insertIntoProducts;
     private PreparedStatement insertIntoCatagories;
     private PreparedStatement insertIntoCustomers;
+    private PreparedStatement insertIntoCards;
     private PreparedStatement queryProductCategory;
     private PreparedStatement insertIntoProductCategories;
 
@@ -67,7 +68,6 @@ public class Datasource {
 
             queryProduct = conn.prepareStatement("SELECT * FROM products WHERE name = ?");
             queryProductsInfo = conn.prepareStatement("SELECT * FROM products");
-            queryCard = conn.prepareStatement("SELECT * FROM cards");
             queryCategory = conn.prepareStatement("SELECT * FROM categories WHERE name = ?");
             queryCategoryInfo = conn.prepareStatement("SELECT * FROM categories");
             queryCustomersInfo = conn.prepareStatement("SELECT * FROM customers");
@@ -75,9 +75,11 @@ public class Datasource {
             insertIntoCatagories = conn.prepareStatement("INSERT INTO categories (name, sub_category_id, created_at) VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             queryProductCategory = conn.prepareStatement("SELECT * FROM products_categories WHERE products_id = ? AND categories_id = ?");
             queryCustomer = conn.prepareStatement("SELECT * FROM customers WHERE email = ?", Statement.RETURN_GENERATED_KEYS);
-            queryCard = conn.prepareStatement("SELECT * FROM cards");
+            queryCard = conn.prepareStatement("SELECT * FROM cards WHERE customer_id = ?");
             insertIntoProductCategories = conn.prepareStatement("INSERT INTO products_categories (products_id, categories_id, created_at) VALUES (?, ?, ?)");
             insertIntoCustomers = conn.prepareStatement("INSERT INTO customers (name, email, address, phone, created_at) VALUES (? , ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            insertIntoCards = conn.prepareStatement("INSERT INTO cards (customer_id, created_at) VALUES (?, ?)");
+
             return true;
         } catch (SQLException e) {
             System.out.println("Couldn't connect to database: " + e.getMessage());
@@ -389,23 +391,24 @@ public class Datasource {
     }
 
     //inserting customer should insert card automaticaly
-
-    //change this method to a transaction
-    public int insertCustomer(String name, String email, String address, String phone ) throws SQLException{
+    private int insertCustomerPrep(String name, String email, String address, String phone ) throws SQLException{
 
         queryCustomer.setString(1, email);
         ResultSet results = queryCustomer.executeQuery();
 
         if (results.next()) {
 
-            return results.getInt("id");
+            int customerId = results.getInt("id");
+            System.out.println(email + " exist in the database with id " + customerId);
+            throw new SQLException("insert customer operation failed duplicate email");
 
         } else {
 
             insertIntoCustomers.setString(1, name);
             insertIntoCustomers.setString(2, email);
             insertIntoCustomers.setString(3, address);
-            insertIntoCustomers.setString(4, new Timestamp(currentTimeMillis()).toString());
+            insertIntoCustomers.setString(4,phone);
+            insertIntoCustomers.setString(5, new Timestamp(currentTimeMillis()).toString());
 
             //this returns integer
             //execute will return boolean
@@ -418,12 +421,84 @@ public class Datasource {
             ResultSet generatedKeys = insertIntoCustomers.getGeneratedKeys();
             if (generatedKeys.next()) {
                 return generatedKeys.getInt(1);
-            } else {
-                throw new SQLException("Couldn't get id for customer");
+            } else{
+                throw new SQLException("Couldn't get customer id");
             }
+
         }
 
     }
 
+    private int insertCard(int customerId) throws SQLException{
+
+        queryCard.setInt(1, customerId);
+        ResultSet results = queryCard.executeQuery();
+
+        if (results.next()) {
+
+            System.out.println(" customer Id " + customerId + " has an active card in the system.");
+            throw new SQLException("active card exist");
+
+        } else {
+
+            insertIntoCards.setInt(1, customerId);
+            insertIntoCards.setString(2, new Timestamp(currentTimeMillis()).toString());
+
+
+            //this returns integer
+            //execute will return boolean
+            int affectedRows = insertIntoCards.executeUpdate();
+
+            if (affectedRows != 1) {
+                throw new SQLException("Couldn't insert customer card!");
+            }
+
+            ResultSet generatedKeys = insertIntoCustomers.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                return generatedKeys.getInt(1);
+            } else{
+                throw new SQLException("Couldn't get customer card id");
+            }
+
+        }
+
+    }
+
+    public void insertCustomer(String name, String email, String address, String phone){
+
+        try {
+
+            conn.setAutoCommit(false);
+
+            int customerId = insertCustomerPrep(name, email, address, phone);
+            int cardId = insertCard(customerId);
+
+
+            if (cardId != 0) {
+                System.out.println("Commitment completed successfully for customer and card");
+                conn.commit();
+            } else {
+                throw new SQLException("The customer and card insert failed");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Insert customer and card exception: " + e.getMessage());
+            try {
+                System.out.println("Performing rollback");
+                conn.rollback();
+            } catch (SQLException e2) {
+                System.out.println("rollback failed " + e2.getMessage());
+            }
+        } finally {
+            try {
+                System.out.println("Resetting default commit behavior");
+                conn.setAutoCommit(true);
+            } catch (SQLException e) {
+                System.out.println("Couldn't reset auto-commit! " + e.getMessage());
+            }
+
+        }
+
+    }
 
 }
