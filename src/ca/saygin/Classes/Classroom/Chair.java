@@ -2,7 +2,6 @@ package ca.saygin.Classes.Classroom;
 
 public class Chair implements Iinteract{
 
-
     private Dimension dimension;
     private Physical physical;
     private boolean isOccupied;

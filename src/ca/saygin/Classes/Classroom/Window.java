@@ -70,4 +70,5 @@ public class Window implements Iinteract{
     public boolean close() {
         return !isOpen;
     }
+
 }

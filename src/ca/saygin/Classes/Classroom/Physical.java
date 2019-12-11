@@ -14,6 +14,7 @@ public class Physical {
         this.material = material;
     }
 
+
     public String getColor() {
         return color;
     }

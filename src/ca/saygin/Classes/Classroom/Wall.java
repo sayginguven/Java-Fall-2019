@@ -54,4 +54,5 @@ public class Wall implements  Iinteract{
         System.out.println("wall can not be closed");
         return false;
     }
+
 }

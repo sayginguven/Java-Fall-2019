@@ -7,4 +7,5 @@ public interface Iinteract {
     boolean open();
     boolean close();
 
+
 }

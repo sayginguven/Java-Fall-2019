@@ -89,4 +89,5 @@ public class Room {
     public void setLightsOn(boolean lightsOn) {
         isLightsOn = lightsOn;
     }
+
 }

@@ -61,6 +61,7 @@ public class Monitor implements Ielectronic, Iinteract {
         }
     }
 
+
     @Override
     public boolean clean() {
         if(!isClean){

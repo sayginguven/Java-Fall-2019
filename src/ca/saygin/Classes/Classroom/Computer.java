@@ -43,4 +43,5 @@ public class Computer implements Ielectronic{
             System.out.println("computer is off");
         }
     }
+
 }

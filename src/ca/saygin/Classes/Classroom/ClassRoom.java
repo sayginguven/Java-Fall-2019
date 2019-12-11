@@ -58,4 +58,5 @@ public class ClassRoom extends Room{
     public void setProjector(Projector projector) {
         this.projector = projector;
     }
+
 }

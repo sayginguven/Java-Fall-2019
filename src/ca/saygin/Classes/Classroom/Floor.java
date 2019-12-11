@@ -41,6 +41,7 @@ public class Floor implements  Iinteract{
         isClean = clean;
     }
 
+
     @Override
     public boolean clean() {
         if(!isClean){

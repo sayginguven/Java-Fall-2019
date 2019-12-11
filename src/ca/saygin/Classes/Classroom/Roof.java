@@ -85,4 +85,5 @@ public class Roof implements  Iinteract{
         System.out.println("roof can not be closed");
         return false;
     }
+
 }

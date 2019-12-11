@@ -15,6 +15,7 @@ public class Projector implements Ielectronic{
 
     }
 
+
     public Projector(boolean isOn, String resolution, String make, String model, boolean isFreeze) {
         this.isOn = isOn;
         this.resolution = resolution;

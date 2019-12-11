@@ -30,4 +30,5 @@ public class Desk {
     public void setPhysical(Physical physical) {
         this.physical = physical;
     }
+
 }

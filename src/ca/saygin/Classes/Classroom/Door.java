@@ -84,4 +84,5 @@ public class Door implements Iinteract{
             return isOpen;
         }
     }
+
 }
