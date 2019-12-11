@@ -1,7 +1,5 @@
 package ca.saygin.Classes;
 
-import java.util.Scanner;
-
 public class Account {
 
     private String name;

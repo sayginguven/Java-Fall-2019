@@ -6,7 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
-
     @org.junit.jupiter.api.Test
     void deposit() {
         Account acc = new Account("test account", 250, 500);
