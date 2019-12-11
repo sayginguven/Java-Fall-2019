@@ -179,7 +179,7 @@ public class ArraysExample {
         }
     }
 
-    public static void printArr(int[] arr) {
+    static void printArr(int[] arr) {
 
         for(int i : arr){
             System.out.print(i + " ");
@@ -188,7 +188,7 @@ public class ArraysExample {
 
     }
 
-    public static int[] reverseArr(int[] arr){
+    static int[] reverseArr(int[] arr){
         int[] newArr = arr.clone();
         int middle = newArr.length/2;
         int lastIndex = newArr.length-1;
